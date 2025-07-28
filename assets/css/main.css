@@ -1320,6 +1320,7 @@ section,
   border-radius: 10px;
   width: 64px;
   height: 64px;
+  font-size: 32px;
 }
 
 .services .service-card .service-icon i {
@@ -3382,6 +3383,7 @@ section,
   justify-content: center;
   margin-bottom: 20px;
   transition: all 0.5s ease;
+  font-size: 28px;
 }
 
 .service-details .service-tabs .tab-content .benefit-card .benefit-icon i {
