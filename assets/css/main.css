@@ -2739,6 +2739,15 @@ section,
   box-shadow: 0 3px 10px color-mix(in srgb, var(--accent-color), transparent 70%);
 }
 
+.contact .my-email-form button[type=submit] {
+  background: rgb(0, 140, 255);
+  border: 0;
+  padding: 10px 30px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
 .contact .contact-form-wrapper .loading,
 .contact .contact-form-wrapper .error-message,
 .contact .contact-form-wrapper .sent-message {
