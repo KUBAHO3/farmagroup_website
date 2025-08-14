@@ -771,7 +771,7 @@ section,
 --------------------------------------------------------------*/
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -2170,6 +2170,11 @@ section,
   .portfolio .entry-overlay {
     padding: 20px;
   }
+}
+
+#clients{
+  background-color: #16262f;
+  min-height: 20vh;
 }
 
 /*--------------------------------------------------------------
