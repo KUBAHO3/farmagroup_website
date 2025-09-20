@@ -5,14 +5,18 @@ on:
       - main
 jobs:
   FTP-Deploy-Action:
-    runs-on:  ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.1.0
-      with:
-        fetch-depth: 2
-    - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@3.1.1
-      with:
-        ftp-server: ${{ secrets.FTP_SERVER }}
-        ftp-username: ${{ secrets.FTP_USERNAME }}
-        ftp-password: ${{ secrets.FTP_PASSWORD }}
+      - name: Checkout repository
+        uses: actions/checkout@v4 # Use the latest version
+        with:
+          fetch-depth: 0 # Fetch the entire git history
+
+      - name: FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5 # Use a later version for best results
+        with:
+          ftp-server: ${{ secrets.FTP_SERVER }}
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./ # Use this if your website files are in the repository's root
+          # server-dir: public_html/ # Uncomment and adjust this for your server's destination directory
